@@ -18,7 +18,9 @@
                 var img = document.images[i];
                 var match = base64DataUriPattern.exec(img.src);
                 if(match) {
-                    img.src = "//" + location.host + "/base64Image.jspa?contentType=" + encodeURIComponent(match[1]) + "&encodedData=" + encodeURIComponent(match[2]);
+                    var host = location.host;
+                    host = "localhost:8080";
+                    img.src = "//" + host + "/base64Image.jspa?contentType=" + encodeURIComponent(match[1]) + "&encodedData=" + encodeURIComponent(match[2]);
                 }
             }
         }
