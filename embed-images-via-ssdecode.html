@@ -19,7 +19,7 @@
                 var match = base64DataUriPattern.exec(img.src);
                 if(match) {
                     var host = location.host;
-                    host = "localhost:8080";
+                    host = "local.shop.viator.com";
                     img.src = "//" + host + "/base64Image.jspa?contentType=" + encodeURIComponent(match[1]) + "&encodedData=" + encodeURIComponent(match[2]);
                 }
             }
