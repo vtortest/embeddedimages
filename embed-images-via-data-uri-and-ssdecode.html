@@ -12,7 +12,7 @@
 		<!--[if lt IE 8]>
     <script type="text/javascript">
         window.onload = function() {
-            var base64DataUriPattern = /^data:(image/[^;]+);base64,(.+)$/;
+            var base64DataUriPattern = /^data:(image\/[^;]+);base64,(.+)$/;
             for (var i = 0; i < document.images.length; i++) {
                 var img = document.images[i];
                 var match = base64DataUriPattern.exec(img.src);
